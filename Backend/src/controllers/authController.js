@@ -130,9 +130,10 @@ export const protect = (req, res, next) => {
 export const logout = (req, res) => {
   res.cookie('jwt', '', {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax',
-    expires: new Date(0), // Expire the cookie immediately
+    secure: true,
+    sameSite: "none",
+    expires: new Date(0), // Expire the cookie 
+    path : '/',
   });
 
   res.json({ message: 'Logged out successfully' });

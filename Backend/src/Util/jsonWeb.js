@@ -7,8 +7,11 @@ export const generateToken = (userId, res) => {
 
   res.cookie("jwt", token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production", 
-    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-    maxAge: 7 * 24 * 60 * 60 * 1000, 
+    secure: true,           // Always true: only send over HTTPS
+    sameSite: "none",       // Always none: allow cross-site cookies (required for most modern frontends)
+    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in ms
+    path: '/',
+    // Optionally, set your root domain:
+    // domain: ".yourdomain.com"
   });
 };
