@@ -1,0 +1,147 @@
+// data.js
+
+const medicines = [
+  {
+    title: "Tefi-O 200 DT",
+    description: "Cefixime Dispersible Tablets IP 200 mg",
+    brand: "Tefi-O",
+    companyName: "LEDERLE",
+    packageSize: "10*10 Tab",
+    mrp: 109,
+    inStockNumber: 10,
+    isAvailable: true,
+    image: {
+      public_id: "dummy_public_id_tefi",
+      url: "https://via.placeholder.com/150?text=Tefi-O+200+DT",
+    },
+  },
+  {
+    title: "Zuracef",
+    description: "Cefixime Dispersible Tablets IP 200 mg",
+    brand: "Zuracef",
+    companyName: "ALKEM",
+    packageSize: "1*30 MI",
+    mrp: 109,
+    inStockNumber: 1,
+    isAvailable: true,
+    image: {
+      public_id: "dummy_public_id_zuracef",
+      url: "https://via.placeholder.com/150?text=Zuracef",
+    },
+  },
+  {
+    title: "Cefaclass-200",
+    description: "Cefixime Dispersible Tablets IP 200 mg",
+    brand: "Cefaclass-200",
+    companyName: "MANKIND",
+    packageSize: "1*1*10",
+    mrp: 109,
+    inStockNumber: 1,
+    isAvailable: true,
+    image: {
+      public_id: "dummy_public_id_cefaclass",
+      url: "https://via.placeholder.com/150?text=Cefaclass-200",
+    },
+  },
+  {
+    title: "Ximeceff 200",
+    description: "Cefixime Dispersible Tablets IP 200 mg",
+    brand: "Ximeceff",
+    companyName: "LUPIN",
+    packageSize: "10*10 Tab",
+    mrp: 109,
+    inStockNumber: 10,
+    isAvailable: true,
+    image: {
+      public_id: "dummy_public_id_ximeceff",
+      url: "https://via.placeholder.com/150?text=Ximeceff+200",
+    },
+  },
+  {
+    title: "Numecet-Plus",
+    description: "Nimesulide & Paracetamol Tablets",
+    brand: "Numecet-Plus",
+    companyName: "LEDERLE",
+    packageSize: "1*30 MI",
+    mrp: 50, // per unit 50/strip mentioned
+    inStockNumber: 20,
+    isAvailable: true,
+    image: {
+      public_id: "dummy_public_id_numecet",
+      url: "https://via.placeholder.com/150?text=Numecet-Plus",
+    },
+  },
+  {
+    title: "Rabigen-DSR",
+    description: "Enteric Coated Rabeprazole Sodium & Domperidone Capsules",
+    brand: "Rabigen-DSR",
+    companyName: "BIOGEN",
+    packageSize: "20*10",
+    mrp: 102,
+    inStockNumber: 20,
+    isAvailable: true,
+    image: {
+      public_id: "dummy_public_id_rabigen",
+      url: "https://via.placeholder.com/150?text=Rabigen-DSR",
+    },
+  },
+  {
+    title: "Achloed-P",
+    description: "Aceclofenac & Paracetamol Tablets",
+    brand: "Acloled-P",
+    companyName: "LEDERLE",
+    packageSize: "20*10",
+    mrp: 85,
+    inStockNumber: 20,
+    isAvailable: true,
+    image: {
+      public_id: "dummy_public_id_acloledp",
+      url: "https://via.placeholder.com/150?text=Acloled-P",
+    },
+  },
+  {
+    title: "Acloled-SP",
+    description: "Aceclofenac, Paracetamol & Serratiopeptidase Tablets",
+    brand: "Acloled-SP",
+    companyName: "ALKEM",
+    packageSize: "20*10",
+    mrp: 117,
+    inStockNumber: 20,
+    isAvailable: true,
+    image: {
+      public_id: "dummy_public_id_aclsp",
+      url: "https://via.placeholder.com/150?text=Acloled-SP",
+    },
+  },
+  {
+    title: "Voveled-Plus",
+    description: "Diclofenac Sodium & Paracetamol Tablets I.P.",
+    brand: "Voveled-Plus",
+    companyName: "LEDERLE",
+    packageSize: "25*2*10",
+    mrp: 40,
+    inStockNumber: 50,
+    isAvailable: true,
+    image: {
+      public_id: "dummy_public_id_voveled",
+      url: "https://via.placeholder.com/150?text=Voveled-Plus",
+    },
+  },
+  {
+    title: "Daneeb-DSR",
+    description: "Rabeprazole Sodium (EC) & Domperidone Prolonged-release Capsules IP",
+    brand: "Daneeb-DSR",
+    companyName: "R.T PHARMA",
+    packageSize: "10*2*10",
+    mrp: 145,
+    inStockNumber: 20,
+    isAvailable: true,
+    image: {
+      public_id: "dummy_public_id_daneeb",
+      url: "https://via.placeholder.com/150?text=Daneeb-DSR",
+    },
+  },
+  // Add more medicines following the above pattern...
+];
+
+export default medicines;
