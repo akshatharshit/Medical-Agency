@@ -4,6 +4,13 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import Particles from '../Ui/Particles'; // Change path as needed!
 
+import insta from "../../assets/generated-image.png" 
+import inter from "../../assets/inter.webp";
+import inogration from "../../assets/inogration.webp";
+import agency from "../../assets/agency.webp";
+import n1 from "../../assets/naman1.jpg";
+import n2 from "../../assets/naman.jpg";
+
 // Fix Leaflet marker icon issue
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -13,15 +20,15 @@ L.Icon.Default.mergeOptions({
 });
 
 const profileImages = [
-    'https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=400&h=400',
-    'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=400&h=400',
-    'https://images.unsplash.com/photo-1519340333755-c05d235aa7f4?auto=format&fit=facearea&w=400&h=400',
+    `${n1}`,
+    `${n2}`,
+    `${n2}`,
 ];
 const galleryImages = [
-    'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=60',
-    'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=60',
-    'https://images.unsplash.com/photo-1454023492550-5696f8ff10e1?auto=format&fit=crop&w=600&q=60',
-    'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=60',
+    `${inter}`,
+    `${inogration}`,
+    `${inogration}`,
+    `${agency}`,
 ];
 const honorsList = [
     "Top Contributor 2023",
@@ -31,20 +38,14 @@ const honorsList = [
 ];
 const socialCards = [
     {
-        platform: 'LinkedIn',
-        handle: '@yourname',
-        link: 'https://linkedin.com/in/yourname',
-        icon: 'https://cdn-icons-png.flaticon.com/512/174/174857.png'
-    },
-    {
-        platform: 'Twitter',
-        handle: '@yourname',
-        link: 'https://twitter.com/yourname',
-        icon: 'https://cdn-icons-png.flaticon.com/512/733/733579.png'
+        platform: 'Instagram',
+        handle: 'shashwat_medical_agency',
+        link: 'https://instagram.com/shashwat_medical_agency',
+        icon: `${insta}`
     },
 ];
 
-const DUMMY_COORD = [51.505, -0.09];
+const DUMMY_COORD = [25.920574, 81.981936];
 const googleMapsDirectionUrl = `https://www.google.com/maps/dir/?api=1&destination=${DUMMY_COORD[0]},${DUMMY_COORD[1]}`;
 
 function ProfileDisplay() {
@@ -133,8 +134,8 @@ function ProfileDisplay() {
 
                     <div className="flex-1 min-w-[280px] flex items-center justify-center p-6 ">
                         <div className="w-full text-center space-y-4">
-                            <h3 className="font-extrabold text-xl text-secondary-content">Visit Our Location</h3>
-                            <p className="font-medium text-secondary-content">
+                            <h3 className="font-extrabold text-xl text-secondary">Visit Our Location</h3>
+                            <p className="font-medium text-secondary">
                                 Discover us at this spot! Whether you're planning a visit or just curious where we are, use the link below to get instant directions on Google Maps.
                             </p>
                             <a
@@ -145,7 +146,7 @@ function ProfileDisplay() {
                             >
                                 🚗 Get Directions
                             </a>
-                            <div className="text-sm text-secondary-content mt-2 italic">
+                            <div className="text-sm text-secondary- mt-2 italic">
                                 (Tap for turn-by-turn navigation from your location)
                             </div>
                         </div>
@@ -165,7 +166,7 @@ function ProfileDisplay() {
                         <h4 className="text-secondary text-3xl mb-6 border-b-4 border-secondary pb-3 font-extrabold tracking-widest uppercase">
                             Honors
                         </h4>
-                        <ul className="list-disc list-inside space-y-3 text-base font-semibold text-secondary-content">
+                        <ul className="list-disc list-inside space-y-3 text-base font-semibold text-secondary">
                             {honorsList.map((honor, idx) => (
                                 <li key={idx} className="flex items-center space-x-2 leading-relaxed">
                                     <svg

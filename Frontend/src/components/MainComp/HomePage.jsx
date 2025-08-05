@@ -3,7 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import ak from "../../assets/Akupi.jpg";
+import Lottie from "lottie-react";
+
+
+import animationData from "../../assets/Doctor, Medical, Surgeon, Healthcare Animation.json";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -22,7 +25,7 @@ export default function HomePage() {
   const isDark = theme === "dark";
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center  overflow-hidden px-4 sm:px-10 py-10">
+    <div className="relative  flex items-center justify-center overflow-hidden px-4 sm:px-10  mt-0">
       {/* Particles background */}
       <Particles
         id="pageParticles"
@@ -55,10 +58,10 @@ export default function HomePage() {
       {/* Decorative blob */}
       <div className="absolute top-[12%] left-[2%] w-60 h-60 sm:w-96 sm:h-96 bg-gradient-to-tr from-primary to-secondary opacity-15 blur-3xl rounded-full animate-pulse z-0 pointer-events-none" />
 
-      <div className="relative z-10 flex flex-col gap-12 md:gap-0 md:flex-row items-center w-full max-w-8xl">
+      <div className="relative z-10 flex flex-col gap-6 md:gap-0 md:flex-row items-center w-full max-w-7xl">
         {/* Left: Info, TypeAnimation, Button */}
         <div className="flex-1 flex flex-col justify-center items-start md:py-12 md:pl-14 pr-0 pl-0 sm:pl-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-black text-primary drop-shadow-[0_3px_12px_rgba(80,140,255,0.08)] select-none pb-2">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black text-primary drop-shadow-[0_3px_12px_rgba(80,140,255,0.08)] select-none pb-2">
             SHASHWAT MEDICAL AGENCY
           </h1>
           <div className="mb-7 md:mb-10">
@@ -82,15 +85,19 @@ export default function HomePage() {
           <div className="space-y-2 sm:space-y-3 text-base sm:text-lg leading-relaxed sm:leading-loose font-medium pl-1 md:pl-0">
             <div>
               <span className="font-extrabold text-primary">Address:</span>{" "}
-              <span className="tracking-wide text-base-content/90">123 Medical Street, Health City, Country</span>
+              <span className="tracking-wide text-base-content/90">
+                Near LIC office, shukulpur, Dahilamau
+              </span>
             </div>
             <div>
               <span className="font-extrabold text-primary">Phone:</span>{" "}
-              <span className="tracking-wide text-base-content/90">+91 9876543210</span>
+              <span className="tracking-wide text-base-content/90">+91 9670443371</span>
             </div>
             <div>
               <span className="font-extrabold text-primary">Bank:</span>{" "}
-              <span className="tracking-wide text-base-content/90">Account No: 1234567890, IFSC: ABCD0123456</span>
+              <span className="tracking-wide text-base-content/90">
+                Account No: 1303102100001040, IFSC: PUNB0130310
+              </span>
             </div>
             <div>
               <span className="font-extrabold text-primary">Agency:</span>{" "}
@@ -109,17 +116,13 @@ export default function HomePage() {
           </button>
         </div>
 
-        {/* Right: Floating image, responsive */}
-        <div className="flex-shrink-0 flex items-center justify-center">
-          <div className="relative w-60 h-60 sm:w-64 sm:h-64 md:w-90 md:h-90  bg-white/40 backdrop-blur-md shadow-2xl border-4 border-primary/40 flex items-center justify-center transition-transform hover:scale-105 duration-300 cursor-pointer group">
-            <img
-              src={ak}
-              alt="Medical Agency"
-              className="w-full h-full rounded-full object-cover border-none shadow-md transition-transform duration-300 group-hover:scale-105"
-            />
-            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-14 h-2 bg-primary/40 rounded-full blur" />
-          </div>
+
+        {/* Right: Lottie animation */}
+        <div className="flex-shrink-0 flex items-center justify-center md:ml-6 w-128 h-128 sm:w-96 sm:h-96">
+          <Lottie animationData={animationData} loop autoplay className="w-full h-full" />
         </div>
+
+
       </div>
     </div>
   );

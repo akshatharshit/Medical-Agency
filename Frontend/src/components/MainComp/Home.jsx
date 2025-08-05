@@ -3,6 +3,7 @@ import HomePage from './HomePage';
 import MedicinesGridPage from './MedicinesGridPage';
 import ProfileDisplay from '../Profile/ProfileDisplay'; 
 import Particles from '../Ui/Particles';
+import QRPlaceholder from "./QRPlaceholder"
 
 function Home() {
   return (
@@ -26,6 +27,7 @@ function Home() {
         <HomePage />
         <MedicinesGridPage />
         <ProfileDisplay />
+        <QRPlaceholder />
       </div>
     </>
   );
